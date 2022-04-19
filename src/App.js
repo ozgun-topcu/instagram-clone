@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {lazy, Suspense} from "react";
+import Login from "./pages/Login"; 
 
-function App() {
+//import * as ROUTES from "./constants/routes";
+//const login = lazy(()=> import("./pages/Login")); lazy fonksiyonu çalışmadı!!
+// path ={ROUTES.} ataması çalışmadı.!!!
+
+
+const App= () => { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Suspense fallback ={<p>loading...</p>}>
+      <Routes>
+        <Route path="/" element = {<Login /> } />
+      </Routes>
+      </Suspense>
+    </Router>
+   
   );
 }
 
 export default App;
+
+
+/* "build:css": "postcss src/styles/tailwind.css -o src/styles/app.css",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/app.css --watch",
+    "react-scripts:start": "react-scripts:start", */
