@@ -4,7 +4,7 @@ const seedDatabase = (firebase) => {
     const users = [
       {
         userId: 'MkLgeVGH7oZokO54839Wh3Wetlr2',
-        username: 'karl',
+        userName: 'karl',
         fullName: 'Karl Hadwen',
         emailAddress: 'karlhadwen@gmail.com',
         following: ['2'],
@@ -13,7 +13,7 @@ const seedDatabase = (firebase) => {
       },
       {
         userId: '2',
-        username: 'raphael',
+        userName: 'raphael',
         fullName: 'Raffaello Sanzio da Urbino',
         emailAddress: 'raphael@sanzio.com',
         following: [],
@@ -22,7 +22,7 @@ const seedDatabase = (firebase) => {
       },
       {
         userId: '3',
-        username: 'dali',
+        userName: 'dali',
         fullName: 'Salvador Dalí',
         emailAddress: 'salvador@dali.com',
         following: [],
@@ -31,7 +31,7 @@ const seedDatabase = (firebase) => {
       },
       {
         userId: '4',
-        username: 'orwell',
+        userName: 'orwell',
         fullName: 'George Orwell',
         emailAddress: 'george@orwell.com',
         following: [],
